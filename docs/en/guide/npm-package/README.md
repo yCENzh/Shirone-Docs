@@ -114,9 +114,10 @@ Posts live in `shirones/content/posts/` and support both Markdown and MDX — ju
 
 ## Updating and Drift Checking
 
-- Running `npx shirones init` again does not re-initialize; it enters ==drift check and repair=={.tip} mode, reporting missing or stale files and safely restoring them — ==your files are never overwritten=={.tip};
-- Add `--force` to overwrite with the template files;
-- `npx shirones info` prints the package's resolved paths, content directory and route injection status.
+- Running `npx shirones init` again does not re-initialize; it enters ==drift check=={.tip} mode, reporting missing/stale files and field differences — ==report-only, it changes nothing=={.tip} and ==your files are never overwritten=={.tip};
+- Add `--update` to actually repair: it restores missing config files, root files and public assets (still never overwriting anything you wrote);
+- Add `--force` to re-scaffold from the template;
+- `npx shirones info` prints detailed status: versions, paths, routes, config-module counts, package manager and a drift summary.
 
 ## About pnpm's Build-Script Approval
 
